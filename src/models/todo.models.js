@@ -8,7 +8,6 @@ const todoSchema = new Schema(
       type: String,
       required: [true, "Title is required"],
       trim: true,
-      minlength: 3,
       maxlength: 100,
     },
     content: {

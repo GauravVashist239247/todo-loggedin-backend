@@ -54,9 +54,10 @@ GET SINGLE TODO (Only Owner)
 */
 export const getSingleTodo = async (req, res) => {
   try {
+    const id = req.params.id;
     const todo = await Todo.findOne({
       _id: req.params.id,
-      user: req.user._id,
+      user: req.user.id,
     });
 
     if (!todo) {
