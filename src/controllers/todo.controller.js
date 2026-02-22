@@ -13,6 +13,7 @@ export const createTodo = async (req, res) => {
     const todo = await Todo.create({
       title,
       content,
+      completed,
       duedate,
       user: req.user.id,
     });
