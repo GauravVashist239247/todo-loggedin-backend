@@ -7,7 +7,7 @@ CREATE TODO
 */
 export const createTodo = async (req, res) => {
   try {
-    const { title, content, duedate } = req.body;
+    const { title, content, completed, duedate } = req.body;
     console.log(req.user);
 
     const todo = await Todo.create({
